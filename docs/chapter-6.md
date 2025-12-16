@@ -1,188 +1,144 @@
-# Chapter 6: Managing Content with Git and GitHub
+📘 **CHAPTER 6 – Capstone: Autonomous Humanoid Robot**
 
-## 6.1 Why Version Control Matters for a Book
+### **SLIDE 1 – Chapter Title**
 
-A professional book—especially a technical one—is never written in a single pass. Content evolves through edits, rewrites, fixes, and updates. **Version control** allows you to manage these changes safely and systematically.
+**Capstone Project**
+**Chapter 6: Autonomous Humanoid Robot**
 
-Git treats your book like a software project. Every chapter, edit, and improvement is tracked, reversible, and auditable. This is essential when working with AI‑generated drafts, where frequent iteration is expected.
-
----
-
-## 6.2 Understanding Git vs GitHub
-
-Although often used together, Git and GitHub serve different purposes:
-
-* **Git** → A version control system that runs locally
-* **GitHub** → A cloud platform for hosting Git repositories
-
-Git tracks changes on your machine. GitHub stores those changes remotely and enables collaboration, backup, and deployment.
+Bringing all robotics and AI components together.
 
 ---
 
-## 6.3 Initializing a Git Repository
+### **SLIDE 2 – Chapter Overview**
 
-If your Docusaurus project is not already a Git repository, initialize it:
+**What You Will Learn**
 
-```
-git init
-```
+* How all modules integrate into one system
+* End-to-end autonomous robot workflow
+* Sim-to-real deployment
+* Real-world humanoid task execution
 
-Then add all files:
-
-```
-git add .
-```
-
-Create your first commit:
-
-```
-git commit -m "Initial book setup"
-```
-
-This commit becomes the foundation of your book’s history.
+This chapter represents the final practical application.
 
 ---
 
-## 6.4 Creating a GitHub Repository
+### **SLIDE 3 – Introduction to Capstone Project**
 
-On GitHub:
+The **Capstone Project** focuses on:
 
-1. Create a new repository
-2. Do not initialize with README
-3. Copy the repository URL
+* Integration of perception, planning, and control
+* Combining AI, ROS 2, simulation, and hardware
 
-Connect your local project:
-
-```
-git remote add origin https://github.com/username/my-book.git
-git branch -M main
-git push -u origin main
-```
-
-Your book is now safely stored on GitHub.
+**Goal:**
+Robot understands commands, navigates, and manipulates objects autonomously.
 
 ---
 
-## 6.5 Organizing Commits Professionally
+### **SLIDE 4 – Overall System Architecture**
 
-Good commit habits make long projects manageable.
+The autonomous humanoid system consists of:
 
-### Best Practices
+* Training & simulation environment
+* Onboard AI computation
+* Sensors and actuators
 
-* One logical change per commit
-* Clear, descriptive commit messages
-* Commit chapter‑level changes
-
-### Example Messages
-
-* `Add Chapter 3: Docusaurus setup`
-* `Refine AI prompt examples`
-* `Fix sidebar ordering`
-
-Avoid committing large unrelated changes together.
+Each component plays a critical role.
 
 ---
 
-## 6.6 Branching for Safety and Experiments
+### **SLIDE 5 – Compute & Control Units**
 
-Branches allow you to work without risking the main content.
+**Workstation**
 
-### Common Branches
+* Trains AI models
+* Runs Isaac Sim and simulations
 
-* `main` → Stable published content
-* `drafts` → Experimental or AI‑generated drafts
-* `feature/chapter-7` → New chapters
+**Edge Brain (Jetson)**
 
-Create a branch:
-
-```
-git checkout -b drafts
-```
-
-Merge only after review.
+* Deploys trained AI models
+* Executes real-time decisions on robot
 
 ---
 
-## 6.7 Working with AI Using Git
+### **SLIDE 6 – Sensors & Actuators**
 
-AI‑assisted writing benefits greatly from Git.
+**Sensors**
 
-Recommended workflow:
+* Intel RealSense Camera – Vision
+* LiDAR – Mapping & navigation
+* IMU – Balance & orientation
 
-1. Generate AI draft
-2. Commit as draft
-3. Edit manually
-4. Commit refined version
+**Actuators**
 
-This preserves both AI output and human improvements.
-
----
-
-## 6.8 Handling Mistakes and Rollbacks
-
-Mistakes are inevitable.
-
-### Useful Commands
-
-* View history:
-
-```
-git log
-```
-
-* Undo last commit (keep changes):
-
-```
-git reset --soft HEAD~1
-```
-
-* Restore a file:
-
-```
-git checkout -- filename.md
-```
-
-Git gives you confidence to experiment freely.
+* Unitree Go2 / G1 humanoid platform
 
 ---
 
-## 6.9 Collaboration and Reviews
+### **SLIDE 7 – Sim-to-Real Workflow**
 
-GitHub enables collaboration through:
+End-to-end workflow:
 
-* Pull requests
-* Code reviews
-* Issue tracking
+* Train robot in **Isaac Sim**
+* Generate AI policies
+* Deploy models on **Jetson**
+* Execute commands on physical robot
 
-Even for solo authors, pull requests help review changes objectively before merging.
-
----
-
-## 6.10 Backup and Reliability
-
-GitHub acts as:
-
-* A backup system
-* A publishing source
-* A deployment trigger
-
-Your book is safe even if your local machine fails.
+This reduces risk and improves reliability.
 
 ---
 
-## 6.11 Chapter Summary
+### **SLIDE 8 – Why Sim-to-Real Matters**
 
-In this chapter, you learned how to:
+Sim-to-real transfer:
 
-* Use Git for book version control
-* Host your book on GitHub
-* Organize commits and branches
-* Manage AI‑generated drafts safely
+* Saves development time
+* Reduces hardware damage
+* Improves real-world performance
 
-Version control transforms book writing into a reliable, professional process.
+Simulation prepares robots for reality.
 
 ---
 
-## 6.12 What’s Next
+### **SLIDE 9 – Example: Autonomous Task**
 
-Chapter 7 will focus on **styling and customization**, including themes, fonts, and visual polish for your book.
+**Voice Command:**
+“Pick up red block and place on shelf”
+
+The robot must interpret, plan, and execute autonomously.
+
+---
+
+### **SLIDE 10 – Robot Task Planning**
+
+**Robot Plan:**
+
+* Navigate to the block
+* Detect and identify red block
+* Grasp the object
+* Move to shelf location
+* Release the block
+
+This shows multi-step autonomy.
+
+---
+
+### **SLIDE 11 – Technologies Integrated**
+
+The capstone integrates:
+
+* ROS 2 communication
+* Simulation (Isaac Sim)
+* NVIDIA Isaac ROS
+* Vision-Language-Action (VLA)
+* Real robot hardware
+
+This demonstrates full-stack robotics.
+
+---
+
+### **SLIDE 12 – Chapter Summary**
+
+* Capstone project proves practical learning
+* Integrates AI, simulation, and hardware
+* Demonstrates autonomous humanoid behavior
+* Represents real-world robotics deployment

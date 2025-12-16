@@ -56,7 +56,7 @@ export default function Home() {
           {/* RIGHT IMAGE */}
           <div style={{ textAlign: 'center' }}>
             <img
-              src="/img/hero-ai-book.png"
+              src="/ai-book/img/ai-spec-book-cover.png"
               alt="AI Spec Book"
               style={{
                 maxWidth: '100%',

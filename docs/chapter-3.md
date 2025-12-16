@@ -1,187 +1,138 @@
-# Chapter 3: Setting Up Docusaurus
+📘 **CHAPTER 3 – Digital Twin & Simulation (Gazebo & Unity)**
 
-## 3.1 Why Docusaurus for Book Writing
 
-Docusaurus is a modern static site generator developed by Meta. Although it is mainly used for documentation, its structure makes it an excellent choice for writing **technical and educational books**. It allows authors to focus on content while handling navigation, layout, and deployment automatically.
+### **SLIDE 1 – Chapter Title**
 
-For spec-driven book creation, Docusaurus provides:
+**Digital Twin & Simulation**
+**Chapter 3: Gazebo & Unity**
 
-* Clear chapter organization
-* Markdown-based writing
-* Automatic sidebar navigation
-* Easy version control with Git
-* Seamless deployment to GitHub Pages
-
-This combination makes it ideal for long-term, maintainable book projects.
+Testing robots safely in virtual worlds.
 
 ---
 
-## 3.2 Prerequisites
+### **SLIDE 2 – Chapter Overview**
 
-Before setting up Docusaurus, make sure the following tools are installed on your system:
+**What You Will Learn**
 
-* **Node.js** (version 18 or higher)
-* **npm** (comes with Node.js)
-* **Git**
-* A code editor (VS Code recommended)
+* What is a Digital Twin
+* Robot simulation using Gazebo
+* Visualization using Unity
+* Physics and sensor simulation
 
-Verify installation using:
-
-```
-node -v
-npm -v
-git --version
-```
-
-If any command fails, resolve it before continuing. Most setup issues are caused by incorrect Node.js versions.
+This chapter explains virtual testing before real deployment.
 
 ---
 
-## 3.3 Creating a New Docusaurus Project
+### **SLIDE 3 – Introduction to Digital Twin**
 
-Navigate to the directory where you want to create your book project and run:
+A **Digital Twin** is:
 
-```
-npx create-docusaurus@latest my-book classic
-```
+* A virtual representation of a robot
+* Includes both robot and environment
+* Mirrors real-world behavior
 
-During setup:
-
-* Choose the **classic** template
-* Select **JavaScript** (recommended for beginners)
-* Accept default settings unless customization is required
-
-After installation completes, move into the project directory:
-
-```
-cd my-book
-```
-
-Your Docusaurus project is now ready.
+Digital twins enable testing **without risk or damage**.
 
 ---
 
-## 3.4 Understanding the Project Structure
+### **SLIDE 4 – Why Simulation is Important**
 
-After setup, the project structure looks like this:
+Simulation allows:
 
-```
-my-book/
-├── docs/
-├── blog/
-├── src/
-├── static/
-├── docusaurus.config.js
-├── sidebars.js
-├── package.json
-```
+* Safe testing of robot behavior
+* Faster development cycles
+* Cost-effective experimentation
 
-### Key Components
-
-* **docs/** → Contains all book chapters
-* **sidebars.js** → Defines chapter order and navigation
-* **docusaurus.config.js** → Main configuration file
-
-For book writing, most work happens inside the `docs` folder.
+Mistakes in simulation are safer than mistakes on real robots.
 
 ---
 
-## 3.5 Cleaning the Project for Book Use
+### **SLIDE 5 – Gazebo Simulation**
 
-Docusaurus includes demo content that is not required for a book. To simplify:
+**Gazebo** is a robotics simulator that provides:
 
-* Remove the `blog` folder if unused
-* Delete sample files inside `docs`
-* Keep only chapter-related Markdown files
+* Realistic physics and gravity
+* Collision detection
+* Multi-robot simulation
 
-A clean structure improves focus and maintainability.
-
----
-
-## 3.6 Creating Chapter Files
-
-Inside the `docs` folder, create Markdown files for each chapter:
-
-```
-docs/
-├── chapter-1-introduction.md
-├── chapter-2-book-specification.md
-├── chapter-3-docusaurus-setup.md
-```
-
-Each file represents a complete chapter of the book.
+It is widely used with ROS 2.
 
 ---
 
-## 3.7 Configuring the Sidebar
+### **SLIDE 6 – Sensor Simulation in Gazebo**
 
-Open `sidebars.js` and configure the book structure:
+Gazebo can simulate:
 
-```
-module.exports = {
-  bookSidebar: [
-    'chapter-1-introduction',
-    'chapter-2-book-specification',
-    'chapter-3-docusaurus-setup'
-  ],
-};
-```
+* **LiDAR** – Distance and mapping
+* **IMU** – Balance and orientation
+* **Cameras** – Vision and perception
 
-The sidebar functions as the book’s table of contents.
+This helps test sensors before real deployment.
 
 ---
 
-## 3.8 Running the Development Server
+### **SLIDE 7 – URDF Integration in Gazebo**
 
-Start the local development server using:
+Gazebo uses **URDF** models to:
 
-```
-npm start
-```
+* Load robot structure
+* Define joints and links
+* Attach sensors and actuators
 
-Open your browser at:
-
-```
-http://localhost:3000
-```
-
-You should now see your book interface with chapters listed in the sidebar. Any changes to Markdown files will appear instantly.
+URDF connects robot design with simulation.
 
 ---
 
-## 3.9 Common Errors and Solutions
+### **SLIDE 8 – Unity Visualization**
 
-**Error: package.json not found**
+**Unity** provides:
 
-* Ensure you are inside the project directory
+* High-fidelity 3D rendering
+* Realistic environments
+* Smooth animations
 
-**Error: Unsupported Node version**
-
-* Upgrade Node.js to version 18 or higher
-
-**Sidebar not showing chapters**
-
-* Check that sidebar IDs match file names exactly
-
-Most issues are related to incorrect paths or versions.
+It is used for advanced robot visualization.
 
 ---
 
-## 3.10 Chapter Summary
+### **SLIDE 9 – Human–Robot Interaction in Unity**
 
-In this chapter, you:
+Unity enables:
 
-* Installed Docusaurus
-* Understood the project structure
-* Prepared the environment for book writing
-* Created chapter files
-* Configured the sidebar
-* Ran the project locally
+* Human-robot interaction testing
+* Behavior visualization
+* Scenario-based simulations
 
-Your Docusaurus setup is now complete and ready for content creation.
+Useful for service and humanoid robots.
 
 ---
 
-## 3.11 What’s Next
+### **SLIDE 10 – VR / AR Support**
 
-In Chapter 4, we will focus on **structuring chapters professionally**, including headings, long-form readability, internal links, and best practices for technical books.
+Unity supports:
+
+* Virtual Reality (VR)
+* Augmented Reality (AR)
+
+This allows immersive robot simulation and training.
+
+---
+
+### **SLIDE 11 – Physics and Sensors**
+
+Common simulated sensors:
+
+* **LiDAR** → Distance mapping
+* **Depth cameras** → 3D perception
+* **IMU** → Balance and orientation
+
+Accurate physics improves real-world performance.
+
+---
+
+### **SLIDE 12 – Chapter Summary**
+
+* Digital Twin = virtual robot + environment
+* Gazebo simulates physics and sensors
+* Unity provides realistic visualization
+* Simulation bridges digital AI to physical robots

@@ -1,143 +1,148 @@
-# Chapter 1: Introduction to AI / Spec‑Driven Book Creation
+📘 **CHAPTER 1 – Physical AI & Embodied Intelligence**
 
-## 1.1 Purpose of This Book
 
-In today’s digital world, writing alone is no longer enough. Modern content creation requires **clear structure**, **automation**, and **easy deployment**. This book focuses on how to create a **high‑quality technical book** using **Artificial Intelligence (AI)** and a **Spec‑Driven approach**, organize it with **Docusaurus**, and publish it professionally using **GitHub Pages**.
+### **SLIDE 1 – Chapter Title**
 
-The main goals of this book are to help you:
+**Physical AI & Humanoid Robotics**
+**Chapter 1: Introduction to Physical AI**
 
-* Use **AI as a writing assistant**, not a replacement
-* Define **clear specifications** before writing any content
-* Structure a book using **Docusaurus documentation architecture**
-* Version‑control your work with **GitHub**
-* Deploy your book publicly using **GitHub Pages**
-
-This book is written for beginners, technical writers, students, and developers who want to publish structured, professional‑looking books online.
+Understanding intelligence beyond screens — AI in the real world.
 
 ---
 
-## 1.2 What Is Spec‑Driven Writing?
+### **SLIDE 2 – Chapter Overview**
 
-Spec‑Driven writing means **planning before writing**. Instead of starting with random chapters or ideas, you first define a **specification (spec)** that answers important questions such as:
+**What You Will Learn**
 
-* What is the goal of this book?
-* Who is the target audience?
-* How many chapters will it have?
-* What topics will each chapter cover?
-* What level of depth is required?
+* What is Physical AI
+* Difference between Digital AI & Physical AI
+* Meaning of Embodied Intelligence
+* Why humanoid robots matter
 
-A specification works like a **blueprint**. Just like engineers don’t build a house without a plan, authors should not write a book without a clear structure.
-
-### Benefits of Spec‑Driven Writing
-
-* Clear direction and focus
-* Consistent tone and depth
-* Easier collaboration with AI
-* Faster writing process
-* Better final quality
-
-In this book, every chapter is designed using a predefined spec to ensure clarity and consistency.
+This chapter builds the foundation of the course.
 
 ---
 
-## 1.3 Role of Artificial Intelligence in Book Creation
+### **SLIDE 3 – What is Physical AI?**
 
-AI does not replace human creativity—it **enhances it**. When used correctly, AI can:
+Physical AI refers to intelligent systems that:
 
-* Generate drafts and outlines
-* Improve grammar and clarity
-* Expand ideas with examples
-* Maintain consistent style
-* Save time and effort
+* Exist in the real physical world
+* Use sensors to perceive the environment
+* Use AI models to make decisions
+* Perform actions using motors and actuators
 
-However, AI works best when given **clear instructions**. That is why Spec‑Driven writing is critical. The better your spec, the better AI’s output.
-
-Think of AI as a **junior writer** that follows your instructions. You remain the editor, architect, and decision‑maker.
+Physical AI systems follow real-world physics like gravity and balance.
 
 ---
 
-## 1.4 Why Use Docusaurus for Book Writing?
+### **SLIDE 4 – Examples of Physical AI**
 
-Docusaurus is a documentation framework developed by Meta (Facebook). Although it is commonly used for technical documentation, it is also **perfect for writing books**, especially technical and educational ones.
+Common examples include:
 
-### Key Advantages of Docusaurus
+* Self-driving cars
+* Delivery robots
+* Warehouse robots
+* Humanoid robots
 
-* Markdown‑based writing (simple and clean)
-* Automatic navigation and sidebar generation
-* Versioning support
-* Built‑in search
-* Responsive design
-* Easy GitHub Pages deployment
-
-Using Docusaurus turns your book into a **living document** that can be updated, improved, and versioned over time.
+These systems interact with real environments, not just data.
 
 ---
 
-## 1.5 Why GitHub Pages for Deployment?
+### **SLIDE 5 – Digital AI vs Physical AI**
 
-GitHub Pages allows you to host static websites **for free** directly from a GitHub repository. Since Docusaurus generates a static site, GitHub Pages is an ideal hosting solution.
+**Digital AI**
 
-### Benefits of GitHub Pages
+* Software-only systems
+* Works with text, images, data
+* No physical interaction
 
-* Free hosting
-* Custom domains supported
-* Git‑based version control
-* Easy CI/CD workflows
-* Public or private repositories
+**Physical AI**
 
-By combining **Docusaurus + GitHub Pages**, you get a professional publishing pipeline without any hosting cost.
+* Has a physical body
+* Senses the environment
+* Moves and acts in the real world
 
----
-
-## 1.6 Book Structure Overview
-
-This book is divided into **10 detailed chapters**, each building on the previous one:
-
-1. Introduction to AI / Spec‑Driven Book Creation
-2. Designing the Book Specification
-3. Setting Up Docusaurus
-4. Structuring Chapters and Sidebars
-5. Writing with AI (Prompts & Workflows)
-6. Managing Content with Git and GitHub
-7. Styling and Customization
-8. Building and Deploying to GitHub Pages
-9. Maintaining and Updating the Book
-10. Best Practices and Real‑World Case Study
-
-Each chapter contains explanations, examples, and practical guidance.
+**Physical AI = Digital Brain + Physical Body**
 
 ---
 
-## 1.7 Who Should Read This Book?
+### **SLIDE 6 – What is Embodied Intelligence?**
 
-This book is ideal for:
+Embodied Intelligence means:
 
-* Technical writers
-* Developers and engineers
-* Students and educators
-* Open‑source contributors
-* Anyone who wants to publish a structured online book
+* Intelligence that exists inside a physical body
+* Learning happens through interaction with the environment
+* The body shape affects intelligence
 
-No advanced AI knowledge is required. Basic familiarity with Markdown and Git is helpful but not mandatory.
+Humans are the best example of embodied intelligence.
 
 ---
 
-## 1.8 How to Use This Book
+### **SLIDE 7 – Why Humanoid Robots?**
 
-To get the most out of this book:
+Humanoid robots are important because:
 
-1. Read chapters in order
-2. Apply concepts practically
-3. Use AI tools alongside your writing
-4. Build your book step by step
-5. Deploy early and improve continuously
+* Our world is designed for humans
+* They can use stairs, doors, and tools
+* Human-like interaction is easier
 
-By the end of this book, you will have a **fully published AI‑assisted, spec‑driven book** hosted on GitHub Pages.
+Humanoids are ideal for human-centered environments.
 
 ---
 
-## 1.9 What’s Next?
+### **SLIDE 8 – Sensors: Robot’s Senses**
 
-In the next chapter, we will design a **complete book specification**, including chapter breakdowns, writing rules, and AI prompt templates.
+Robots understand the world using sensors:
 
-Let’s move from ideas to execution.
+* Cameras → Vision
+* LiDAR → Distance & mapping
+* IMU → Balance & orientation
+* Force sensors → Touch & pressure
+
+Sensors act like human senses.
+
+---
+
+### **SLIDE 9 – Physical AI System Architecture**
+
+A Physical AI system has four core parts:
+
+* Sensors (Input)
+* AI Brain (Decision making)
+* Control System (ROS 2)
+* Actuators (Movement)
+
+All parts work together to create intelligent behavior.
+
+---
+
+### **SLIDE 10 – Why Physical AI Matters**
+
+Physical AI represents a major shift:
+
+* From digital intelligence to embodied intelligence
+* From screen-based AI to real-world AI
+* From passive systems to active agents
+
+This is the future of AI and robotics.
+
+---
+
+### **SLIDE 11 – Learning Outcomes**
+
+After completing this chapter, students will be able to:
+
+* Explain Physical AI
+* Understand embodied intelligence
+* Describe humanoid robots
+* Identify key sensors in robots
+
+---
+
+### **SLIDE 12 – Chapter Summary**
+
+* Physical AI operates in the real world
+* Embodied intelligence combines mind and body
+* Humanoid robots fit human environments
+* Sensors + AI + control = intelligent robots

@@ -81,3 +81,12 @@ const config: Config = {
 };
 
 export default config;
+module.exports = {
+  // ...
+  scripts: [
+    {
+      src: 'https://cdn.ask-ai-button.io/loader-v1.js',
+      async: true,
+    },
+  ],
+};
