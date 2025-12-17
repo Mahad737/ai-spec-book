@@ -1,0 +1,104 @@
+<style>
+#rag-chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#rag-chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+#rag-chat-header {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#rag-chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#rag-chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#rag-chat-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+#rag-chat-input button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+</style>
+
+<button id="rag-chat-btn">🤖</button>
+
+<div id="rag-chat-box">
+  <div id="rag-chat-header">Ask the Book AI</div>
+  <div id="rag-chat-messages"></div>
+  <div id="rag-chat-input">
+    <input id="rag-question" placeholder="Ask something..." />
+    <button onclick="sendQuestion()">Send</button>
+  </div>
+</div>
+
+<script>
+const btn = document.getElementById("rag-chat-btn");
+const box = document.getElementById("rag-chat-box");
+
+btn.onclick = () => {
+  box.style.display = box.style.display === "flex" ? "none" : "flex";
+};
+
+async function sendQuestion() {
+  const input = document.getElementById("rag-question");
+  const msgBox = document.getElementById("rag-chat-messages");
+
+  const question = input.value;
+  if (!question) return;
+
+  msgBox.innerHTML += `<div><b>You:</b> ${question}</div>`;
+  input.value = "";
+
+  const res = await fetch("http://127.0.0.1:8000/chat", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ question })
+  });
+
+  const data = await res.json();
+  msgBox.innerHTML += `<div><b>AI:</b> ${data.answer}</div>`;
+  msgBox.scrollTop = msgBox.scrollHeight;
+}
+</script>

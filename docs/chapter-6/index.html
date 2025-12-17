@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-6" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">chapter-6 | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://mahad737.github.io/ai-spec-book/docs/chapter-6"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="chapter-6 | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="📘 CHAPTER 6 – Capstone: Autonomous Humanoid Robot"><meta data-rh="true" property="og:description" content="📘 CHAPTER 6 – Capstone: Autonomous Humanoid Robot"><link data-rh="true" rel="icon" href="/ai-spec-book/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://mahad737.github.io/ai-spec-book/docs/chapter-6"><link data-rh="true" rel="alternate" href="https://mahad737.github.io/ai-spec-book/docs/chapter-6" hreflang="en"><link data-rh="true" rel="alternate" href="https://mahad737.github.io/ai-spec-book/docs/chapter-6" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"chapter-6","item":"https://mahad737.github.io/ai-spec-book/docs/chapter-6"}]}</script><link rel="stylesheet" href="/ai-spec-book/assets/css/styles.76e5e3f5.css">
+<script src="/ai-spec-book/assets/js/runtime~main.05a9e2df.js" defer="defer"></script>
+<script src="/ai-spec-book/assets/js/main.dd79c50e.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ai-spec-book/"><b class="navbar__title text--truncate">Physical AI</b></a><a class="navbar__item navbar__link" href="/ai-spec-book/docs/intro">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Mahad737/ai-spec-book" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/intro"><span title="Tutorial Intro" class="linkLabel_WmDU">Tutorial Intro</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ai-spec-book/docs/category/tutorial---basics"><span title="Tutorial - Basics" class="categoryLinkLabel_W154">Tutorial - Basics</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ai-spec-book/docs/category/tutorial---extras"><span title="Tutorial - Extras" class="categoryLinkLabel_W154">Tutorial - Extras</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/chapter-1"><span title="chapter-1" class="linkLabel_WmDU">chapter-1</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/chapter-2"><span title="chapter-2" class="linkLabel_WmDU">chapter-2</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/chapter-3"><span title="chapter-3" class="linkLabel_WmDU">chapter-3</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/chapter-4"><span title="chapter-4" class="linkLabel_WmDU">chapter-4</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ai-spec-book/docs/chapter-5"><span title="chapter-5" class="linkLabel_WmDU">chapter-5</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ai-spec-book/docs/chapter-6"><span title="chapter-6" class="linkLabel_WmDU">chapter-6</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ai-spec-book/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">chapter-6</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>chapter-6</h1></header><p>📘 <strong>CHAPTER 6 – Capstone: Autonomous Humanoid Robot</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-1--chapter-title"><strong>SLIDE 1 – Chapter Title</strong><a href="#slide-1--chapter-title" class="hash-link" aria-label="Direct link to slide-1--chapter-title" title="Direct link to slide-1--chapter-title" translate="no">​</a></h3>
+<p><strong>Capstone Project</strong>
+<strong>Chapter 6: Autonomous Humanoid Robot</strong></p>
+<p>Bringing all robotics and AI components together.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-2--chapter-overview"><strong>SLIDE 2 – Chapter Overview</strong><a href="#slide-2--chapter-overview" class="hash-link" aria-label="Direct link to slide-2--chapter-overview" title="Direct link to slide-2--chapter-overview" translate="no">​</a></h3>
+<p><strong>What You Will Learn</strong></p>
+<ul>
+<li class="">How all modules integrate into one system</li>
+<li class="">End-to-end autonomous robot workflow</li>
+<li class="">Sim-to-real deployment</li>
+<li class="">Real-world humanoid task execution</li>
+</ul>
+<p>This chapter represents the final practical application.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-3--introduction-to-capstone-project"><strong>SLIDE 3 – Introduction to Capstone Project</strong><a href="#slide-3--introduction-to-capstone-project" class="hash-link" aria-label="Direct link to slide-3--introduction-to-capstone-project" title="Direct link to slide-3--introduction-to-capstone-project" translate="no">​</a></h3>
+<p>The <strong>Capstone Project</strong> focuses on:</p>
+<ul>
+<li class="">Integration of perception, planning, and control</li>
+<li class="">Combining AI, ROS 2, simulation, and hardware</li>
+</ul>
+<p><strong>Goal:</strong>
+Robot understands commands, navigates, and manipulates objects autonomously.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-4--overall-system-architecture"><strong>SLIDE 4 – Overall System Architecture</strong><a href="#slide-4--overall-system-architecture" class="hash-link" aria-label="Direct link to slide-4--overall-system-architecture" title="Direct link to slide-4--overall-system-architecture" translate="no">​</a></h3>
+<p>The autonomous humanoid system consists of:</p>
+<ul>
+<li class="">Training &amp; simulation environment</li>
+<li class="">Onboard AI computation</li>
+<li class="">Sensors and actuators</li>
+</ul>
+<p>Each component plays a critical role.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-5--compute--control-units"><strong>SLIDE 5 – Compute &amp; Control Units</strong><a href="#slide-5--compute--control-units" class="hash-link" aria-label="Direct link to slide-5--compute--control-units" title="Direct link to slide-5--compute--control-units" translate="no">​</a></h3>
+<p><strong>Workstation</strong></p>
+<ul>
+<li class="">Trains AI models</li>
+<li class="">Runs Isaac Sim and simulations</li>
+</ul>
+<p><strong>Edge Brain (Jetson)</strong></p>
+<ul>
+<li class="">Deploys trained AI models</li>
+<li class="">Executes real-time decisions on robot</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-6--sensors--actuators"><strong>SLIDE 6 – Sensors &amp; Actuators</strong><a href="#slide-6--sensors--actuators" class="hash-link" aria-label="Direct link to slide-6--sensors--actuators" title="Direct link to slide-6--sensors--actuators" translate="no">​</a></h3>
+<p><strong>Sensors</strong></p>
+<ul>
+<li class="">Intel RealSense Camera – Vision</li>
+<li class="">LiDAR – Mapping &amp; navigation</li>
+<li class="">IMU – Balance &amp; orientation</li>
+</ul>
+<p><strong>Actuators</strong></p>
+<ul>
+<li class="">Unitree Go2 / G1 humanoid platform</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-7--sim-to-real-workflow"><strong>SLIDE 7 – Sim-to-Real Workflow</strong><a href="#slide-7--sim-to-real-workflow" class="hash-link" aria-label="Direct link to slide-7--sim-to-real-workflow" title="Direct link to slide-7--sim-to-real-workflow" translate="no">​</a></h3>
+<p>End-to-end workflow:</p>
+<ul>
+<li class="">Train robot in <strong>Isaac Sim</strong></li>
+<li class="">Generate AI policies</li>
+<li class="">Deploy models on <strong>Jetson</strong></li>
+<li class="">Execute commands on physical robot</li>
+</ul>
+<p>This reduces risk and improves reliability.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-8--why-sim-to-real-matters"><strong>SLIDE 8 – Why Sim-to-Real Matters</strong><a href="#slide-8--why-sim-to-real-matters" class="hash-link" aria-label="Direct link to slide-8--why-sim-to-real-matters" title="Direct link to slide-8--why-sim-to-real-matters" translate="no">​</a></h3>
+<p>Sim-to-real transfer:</p>
+<ul>
+<li class="">Saves development time</li>
+<li class="">Reduces hardware damage</li>
+<li class="">Improves real-world performance</li>
+</ul>
+<p>Simulation prepares robots for reality.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-9--example-autonomous-task"><strong>SLIDE 9 – Example: Autonomous Task</strong><a href="#slide-9--example-autonomous-task" class="hash-link" aria-label="Direct link to slide-9--example-autonomous-task" title="Direct link to slide-9--example-autonomous-task" translate="no">​</a></h3>
+<p><strong>Voice Command:</strong>
+“Pick up red block and place on shelf”</p>
+<p>The robot must interpret, plan, and execute autonomously.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-10--robot-task-planning"><strong>SLIDE 10 – Robot Task Planning</strong><a href="#slide-10--robot-task-planning" class="hash-link" aria-label="Direct link to slide-10--robot-task-planning" title="Direct link to slide-10--robot-task-planning" translate="no">​</a></h3>
+<p><strong>Robot Plan:</strong></p>
+<ul>
+<li class="">Navigate to the block</li>
+<li class="">Detect and identify red block</li>
+<li class="">Grasp the object</li>
+<li class="">Move to shelf location</li>
+<li class="">Release the block</li>
+</ul>
+<p>This shows multi-step autonomy.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-11--technologies-integrated"><strong>SLIDE 11 – Technologies Integrated</strong><a href="#slide-11--technologies-integrated" class="hash-link" aria-label="Direct link to slide-11--technologies-integrated" title="Direct link to slide-11--technologies-integrated" translate="no">​</a></h3>
+<p>The capstone integrates:</p>
+<ul>
+<li class="">ROS 2 communication</li>
+<li class="">Simulation (Isaac Sim)</li>
+<li class="">NVIDIA Isaac ROS</li>
+<li class="">Vision-Language-Action (VLA)</li>
+<li class="">Real robot hardware</li>
+</ul>
+<p>This demonstrates full-stack robotics.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-12--chapter-summary"><strong>SLIDE 12 – Chapter Summary</strong><a href="#slide-12--chapter-summary" class="hash-link" aria-label="Direct link to slide-12--chapter-summary" title="Direct link to slide-12--chapter-summary" translate="no">​</a></h3>
+<ul>
+<li class="">Capstone project proves practical learning</li>
+<li class="">Integrates AI, simulation, and hardware</li>
+<li class="">Demonstrates autonomous humanoid behavior</li>
+<li class="">Represents real-world robotics deployment</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ai-spec-book/docs/chapter-5"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">chapter-5</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#slide-1--chapter-title" class="table-of-contents__link toc-highlight"><strong>SLIDE 1 – Chapter Title</strong></a></li><li><a href="#slide-2--chapter-overview" class="table-of-contents__link toc-highlight"><strong>SLIDE 2 – Chapter Overview</strong></a></li><li><a href="#slide-3--introduction-to-capstone-project" class="table-of-contents__link toc-highlight"><strong>SLIDE 3 – Introduction to Capstone Project</strong></a></li><li><a href="#slide-4--overall-system-architecture" class="table-of-contents__link toc-highlight"><strong>SLIDE 4 – Overall System Architecture</strong></a></li><li><a href="#slide-5--compute--control-units" class="table-of-contents__link toc-highlight"><strong>SLIDE 5 – Compute &amp; Control Units</strong></a></li><li><a href="#slide-6--sensors--actuators" class="table-of-contents__link toc-highlight"><strong>SLIDE 6 – Sensors &amp; Actuators</strong></a></li><li><a href="#slide-7--sim-to-real-workflow" class="table-of-contents__link toc-highlight"><strong>SLIDE 7 – Sim-to-Real Workflow</strong></a></li><li><a href="#slide-8--why-sim-to-real-matters" class="table-of-contents__link toc-highlight"><strong>SLIDE 8 – Why Sim-to-Real Matters</strong></a></li><li><a href="#slide-9--example-autonomous-task" class="table-of-contents__link toc-highlight"><strong>SLIDE 9 – Example: Autonomous Task</strong></a></li><li><a href="#slide-10--robot-task-planning" class="table-of-contents__link toc-highlight"><strong>SLIDE 10 – Robot Task Planning</strong></a></li><li><a href="#slide-11--technologies-integrated" class="table-of-contents__link toc-highlight"><strong>SLIDE 11 – Technologies Integrated</strong></a></li><li><a href="#slide-12--chapter-summary" class="table-of-contents__link toc-highlight"><strong>SLIDE 12 – Chapter Summary</strong></a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
